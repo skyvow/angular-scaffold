@@ -1,0 +1,15 @@
+{
+    "compact": false,
+    "presets": [
+        "es2015"
+    ],
+    "plugins": [
+        "transform-object-assign",
+        [
+            "transform-es2015-classes",
+            {
+                "loose": true
+            }
+        ]
+    ]
+}
