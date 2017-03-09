@@ -1,3 +1,101 @@
-.example {
-	
+$color: #479de6;
+
+%image {
+	background-size: contain !important;
+	border-radius: 50%;
+	overflow: hidden;
+	margin: 20px;
+}
+
+@define-mixin icon $network, $color: blue {
+    .icon.$(network) {
+    	width: 20px;
+    	height: 20px;
+    	margin: 10px 0;
+        color: $color;
+        @mixin-content;
+    }
+    .icon.$(network):hover {
+        color: white;
+        background: $color;
+    }
+}
+
+@mixin icon red {
+	@if 3 < 5 {
+		background: red;
+	}
+	@else {
+		background: blue;
+	}
+}
+
+@mixin icon yellow, yellow {
+    background: yellow;
+}
+
+@custom-media --small-viewport (max-width: 30em);
+
+@media (--small-viewport) {
+	.example {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		
+		.image-1 {
+			width: 64px;
+			height: 64px;
+			background: url(../images/image-1.jpg) no-repeat;
+			@extend %image;
+		}
+
+		.image-2 {
+			width: 128px;
+			height: 128px;
+			background: url(../images/image-2.jpg) no-repeat;
+			@extend %image;
+		}
+
+		@at-root {
+			.title {
+				font-size: 16px;
+				margin: 20px;
+				color: $color;
+			}
+		}
+	}
+}
+
+@for $i from 0 to 50 by 5 {
+    .margin-$i {
+        margin: $(i)px !important;
+    }
+    .margin-top-$i { 
+        margin-top: $(i)px !important; 
+    }
+    .margin-right-$i { 
+        margin-right: $(i)px !important; 
+    }
+    .margin-bottom-$i { 
+        margin-bottom: $(i)px !important; 
+    }
+    .margin-left-$i { 
+        margin-left: $(i)px !important; 
+    }
+    .padding-$i {
+        padding: $(i)px !important;
+    }
+    .padding-top-$i { 
+        padding-top: $(i)px !important; 
+    }
+    .padding-right-$i { 
+        padding-right: $(i)px !important; 
+    }
+    .padding-bottom-$i { 
+        padding-bottom: $(i)px !important; 
+    }
+    .padding-left-$i { 
+        padding-left: $(i)px !important; 
+    }
 }
