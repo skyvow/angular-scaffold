@@ -1,3 +1,5 @@
+import angular from 'angular'
+
 // filters
 import toUpperCase from './toUpperCase'
 

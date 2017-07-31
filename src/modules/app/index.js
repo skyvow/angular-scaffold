@@ -1,3 +1,13 @@
+import angular from 'angular'
+import ocLazyLoad from 'oclazyload'
+import ngAnimate from 'angular-animate'
+import ngSanitize from 'angular-sanitize'
+import ngResource from 'angular-resource'
+import uiRouter from 'angular-ui-router'
+import angularMoment from 'angular-moment'
+import 'ionic'
+import 'ionic-angular'
+
 // styles
 import styles from 'assets/styles/main'
 
@@ -35,12 +45,12 @@ angular
 
 export default angular
     .module('app.index', [
-        'oc.lazyLoad', 
+        ocLazyLoad, 
         'ionic',  
-        'ngAnimate',  
-        'ngSanitize',  
-        'ngResource',  
-        'ui.router', 
-        'angularMoment', 
+        ngAnimate,  
+        ngSanitize,  
+        ngResource,  
+        uiRouter, 
+        angularMoment.name, 
         'app.main'
     ])

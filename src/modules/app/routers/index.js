@@ -1,3 +1,5 @@
+import angular from 'angular'
+
 // routers
 import Router from './router'
 

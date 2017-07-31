@@ -14,6 +14,10 @@ class Ctrl {
     init() {
 
     }
+
+    onTap(path) {
+        this.$state.go(path)
+    }
 }
 
 Ctrl.$inject = [

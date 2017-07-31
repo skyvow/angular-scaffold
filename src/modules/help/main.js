@@ -1,3 +1,5 @@
+import angular from 'angular'
+
 // register
 import register from 'helpers/register'
 

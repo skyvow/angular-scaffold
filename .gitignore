@@ -39,8 +39,10 @@
 # 
 ################################################
 
-build/*
+build/**
 src/*.hot-update.*
+.happypack/**
+manifest.json
 
 
 

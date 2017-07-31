@@ -1,3 +1,5 @@
+import angular from 'angular'
+
 // animations
 import animate from './animate'
 

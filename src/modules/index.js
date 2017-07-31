@@ -1,3 +1,4 @@
+import angular from 'angular'
 import index from './app/index'
 import web from './web/index'
 import help from './help/index'

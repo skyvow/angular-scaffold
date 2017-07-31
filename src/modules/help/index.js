@@ -1,3 +1,4 @@
+import angular from 'angular'
 import { plugin, loadPlugin } from 'etc/loadplugin'
 import authService from '../app/resolves/authService'
 
